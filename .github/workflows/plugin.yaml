@@ -1,4 +1,4 @@
-name: Docker rules
+name: Podman rules
 on:
   - push
   - pull_request
@@ -29,3 +29,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: thought-machine/release-action@master
+
+        # TODO change this

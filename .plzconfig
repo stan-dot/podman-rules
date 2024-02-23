@@ -2,7 +2,7 @@
 version = >=17.0.0
 
 [PluginDefinition]
-Name = docker
+Name = podman
 
 [PluginConfig "DEFAULT_DOCKER_REPO"]
 DefaultValue = hub.docker.com

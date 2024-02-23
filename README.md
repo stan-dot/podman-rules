@@ -1,18 +1,18 @@
-# Docker rules
-Docker rules for the Please build system
+# Podman rules
+Podman rules for the Please build system
 
 ## Basic usage
 
 To get started, run `plz init plugin docker`. You can then build a base image like so:
 
 ```python
-docker_image(
+podman_image(
     name = "base",
     dockerfile = "Dockerfile-base",
     visibility = ["PUBLIC"],
 )
 
-docker_image(
+podman_image(
     name = "image",
     srcs = ["//hello_service"],
     dockerfile = "Dockerfile",

@@ -1,10 +1,10 @@
 subinclude("///shell//build_defs:shell")
 
-def docker_image(name:str, srcs:list=[], image:str=None, version:str='',
+def podman_image(name:str, srcs:list=[], image:str=None, version:str='',
                  dockerfile:str='Dockerfile', base_image:str='', repo:str='', labels:list=[],
                  pass_env:list=[], run_args:str='', test_only:bool=False, visibility:list=None, build_args:str='',
                  container_args:str=''):
-    """docker_image defines a build rule for a Docker image.
+    """podman_image defines a build rule for a Podman image.
 
     You must use `plz run` to actually build the target.
     There are also several related targets created, for example a fully qualified name
@@ -33,9 +33,9 @@ def docker_image(name:str, srcs:list=[], image:str=None, version:str='',
         base_image = canonicalise(base_image)
     if not repo:
         repo = CONFIG.DOCKER.DEFAULT_DOCKER_REPO
-    labels += ['docker_image=' + image, 'docker']
+    labels += ['podman_image=' + image, 'docker']
 
-    # This tarball becomes the build context for Docker.
+    # This tarball becomes the build context for Podman.
     tarball, dockerfile = _docker_tarball_rule(
         name = name,
         srcs = srcs,
