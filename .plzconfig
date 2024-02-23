@@ -4,7 +4,7 @@ version = >=17.0.0
 [PluginDefinition]
 Name = podman
 
-[PluginConfig "DEFAULT_DOCKER_REPO"]
+[PluginConfig "DEFAULT_IMAGE_REGISTRY"]
 DefaultValue = hub.docker.com
 
 [Plugin "shell"]

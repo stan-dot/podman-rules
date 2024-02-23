@@ -29,5 +29,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: thought-machine/release-action@master
-
-        # TODO change this
+        # it is a separate repository  https://github.com/thought-machine/release-action

@@ -1,5 +1,5 @@
 filegroup(
-    name = "docker",
-    srcs = ["docker.build_defs"],
+    name = "podman",
+    srcs = ["podman.build_defs"],
     visibility = ["PUBLIC"],
 )
